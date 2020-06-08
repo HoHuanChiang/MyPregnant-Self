@@ -38,6 +38,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class RecordMain extends AppCompatActivity {
+    //test
     FlexboxLayout recordCountLinearLayout;
     LinearLayout recordContent;
     int userID;
