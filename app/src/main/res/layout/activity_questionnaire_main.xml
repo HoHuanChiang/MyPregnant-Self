@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionnaireMain"
+    android:orientation="vertical">
+    <include layout="@layout/my_toolbar"/>
+    <include layout="@layout/layout_current_week"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:padding="@dimen/total_padding_left"
+        android:id="@+id/questionnaireMainListView">
+    </ListView>
+</LinearLayout>

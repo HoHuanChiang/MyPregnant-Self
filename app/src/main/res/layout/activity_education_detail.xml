@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EducationDetail"
+    android:orientation="vertical">
+    <include layout="@layout/my_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/dotted_border"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textSize="@dimen/general_title_size"
+            android:textColor="@color/black"
+            android:text="asdvasv"
+            android:id="@+id/educationDetailName"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="如何預防愛滋病 記得作保護措施喔"
+                android:textSize="@dimen/general_size"
+                android:id="@+id/educationDetailContent"/>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

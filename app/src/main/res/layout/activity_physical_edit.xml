@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhysicalEdit"
+    android:orientation="vertical">
+    <include layout="@layout/my_toolbar"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true"
+                android:id="@+id/physicalEditListLayout">
+            </LinearLayout>
+        </ScrollView>
+        <!--
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/physicalEditListView"></ListView>-->
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ok"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="30dp"
+            android:backgroundTint="@color/whitesmoke"
+            android:id="@+id/physicalEditOKBtn"
+            android:background="@null"/>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="50dp"
+                android:src="@drawable/questionnaire"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionnaireMainListName"
+                android:text="xxxx問卷"
+                android:textColor="@color/black"
+                android:textSize="@dimen/general_size"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lightheart"
+                android:id="@+id/questionnaireMainCheckImage"
+                android:adjustViewBounds="true"/>
+            <!--
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="未填寫"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:id="@+id/documentMainListStatus"/>-->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

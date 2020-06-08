@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleCalendar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/my_toolbar"/>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <TextView
+                    android:id="@+id/calendarScheduleMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="sdvsd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/general_title_size"
+                    app:layout_scrollFlags="scroll|enterAlways" />
+
+                <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                    android:id="@+id/calendarScheduleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:compactCalendarCurrentDayIndicatorStyle="fill_large_indicator"
+                    app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="true"
+                    app:compactCalendarTextSize="12sp"
+                    app:layout_scrollFlags="scroll|enterAlways" />
+
+                <LinearLayout
+                    android:id="@+id/calendarScheduleDateWeekLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/total_padding_left"
+                    android:background="#DCDDDD"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/total_padding_left"
+                    android:paddingTop="10dp"
+                    android:paddingRight="@dimen/total_padding_left"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/calendarSchdeuleEventDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="週數："
+                            android:textColor="#000000"
+                            android:textSize="@dimen/general_size" />
+
+                        <TextView
+                            android:id="@+id/calendarSchdeuleEventWeek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/calendarSchdeuleEventYesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dotted_bottom"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/total_padding_left"
+                                android:paddingBottom="@dimen/total_padding_left"
+                                android:text="產檢日"
+                                android:textColor="#C30D23"
+                                android:textSize="@dimen/general_title_size" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/total_padding_left"
+                                android:paddingBottom="@dimen/total_padding_left">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="產檢時間："
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/calendarSchdeuleEventTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="13:00"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/total_padding_left"
+                                android:paddingBottom="@dimen/total_padding_left">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="產檢號碼："
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/calendarSchdeuleEventNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="@dimen/total_padding_left"
+                                android:paddingBottom="@dimen/total_padding_left">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="產檢備註："
+                                    android:textColor="#000000" />
+
+                                <TextView
+                                    android:id="@+id/calendarSchdeuleEventNote"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lineHeight="20dp"
+                                    android:text="asdvasdvasvasdvasdvasdvasdvasdvasdvasdvasdvasdvasdvasdvasdvasdvasvasdv"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/calendarUpdateBtn"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@null"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/update" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/calendarScheduleDetailsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/total_padding_left"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/myBlue"
+                        android:text="產檢流程"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/general_title_size" />
+
+                    <LinearLayout
+                        android:id="@+id/calendarScheduleLocationLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dotted_bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/total_padding_left"
+                            android:paddingTop="@dimen/total_padding_left"
+                            android:paddingRight="@dimen/total_padding_left"
+                            android:paddingBottom="5dp"
+                            android:text="位置資訊："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/general_title_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/calendarSchedulePhysicalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/total_padding_left"
+                            android:paddingTop="@dimen/total_padding_left"
+                            android:paddingRight="@dimen/total_padding_left"
+                            android:paddingBottom="5dp"
+                            android:text="生理資訊："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/general_title_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:src="@drawable/add"
+        android:layout_margin="16dp"
+        android:visibility="invisible"
+        android:id="@+id/recordAddBtn"/>
+</RelativeLayout>

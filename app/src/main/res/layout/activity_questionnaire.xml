@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Questionnaire"
+    android:orientation="vertical">
+    <include layout="@layout/my_toolbar"/>
+    <include layout="@layout/my_toolbar_sub"/>
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="xxxx問卷"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:id="@+id/questionnaireNameTextView"/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="#ffffff">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/questionbackground"
+            android:scaleType="fitStart"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/questionnaireLayout">
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    <!--
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:id="@+id/questionnaireListView">
+
+    </ListView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:background="#ffffff">
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/questionnaireDoneBtn"
+            android:background="@drawable/ok"/>
+    </LinearLayout>
+
+</LinearLayout>

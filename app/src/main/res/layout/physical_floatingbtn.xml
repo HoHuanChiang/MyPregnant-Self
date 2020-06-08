@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton
+        android:id="@+id/floatingEditBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edit"
+        android:background="@null"
+        android:layout_gravity="bottom|end"
+        android:elevation="8dp"
+        app:rippleColor="@color/aliceblue"/>
+
+    <ImageButton
+        android:id="@+id/floatingSummaryBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/all"
+        android:background="@null"
+        android:layout_gravity="bottom|end"
+        android:elevation="8dp"
+        app:rippleColor="@color/aliceblue"/>
+
+    <ImageButton
+        android:id="@+id/floatingMenuBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/menu"
+        android:background="@null"
+        android:layout_gravity="bottom|end"
+        android:elevation="8dp"
+        app:rippleColor="@color/aliceblue"/>
+</FrameLayout>

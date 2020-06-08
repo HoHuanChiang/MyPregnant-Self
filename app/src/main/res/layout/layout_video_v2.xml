@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:id="@+id/layoutVideoOutterLayout"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/layoutVideoImage"
+
+                                    android:src="@drawable/loading"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|bottom"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+                                    android:id="@+id/layoutVideoWeekText"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:text="第一週"/>
+                        </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/layoutVideoTitleText"
+                    android:textSize="@dimen/general_size"
+                    android:textColor="@color/black"
+                    android:text="sdsdsdsdsd"/>
+        </LinearLayout>
+</LinearLayout>
