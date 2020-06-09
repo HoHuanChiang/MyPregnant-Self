@@ -266,6 +266,8 @@ public class RecordMain extends AppCompatActivity {
         rr.setKidneyUrineAcid((KidneyUrineAcid.getText().toString()));
 
         Gson gson=new Gson();
+        //database
+        /*
         InsertRecord insertRecord=new InsertRecord(String.valueOf(userID), gson.toJson(rr), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -273,7 +275,7 @@ public class RecordMain extends AppCompatActivity {
             }
         });
         RequestQueue q= Volley.newRequestQueue(RecordMain.this);
-        q.add(insertRecord);
+        q.add(insertRecord);*/
     }
     public void setRecordData(int count){
         TextView Weight=recordContent.findViewById(R.id.recordAddWeight);
@@ -364,10 +366,13 @@ public class RecordMain extends AppCompatActivity {
 
     }
     public void GetRecordData(){
+        //database
+        /*
         GetRecord getRecord=new GetRecord(String.valueOf(userID), new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 try {
+                    String response="[{\"Date\":\"1900-01-01\",\"Weight\":\"1\",\"SBP\":\"2\",\"DBP\":\"3\",\"Mouth\":\"\\u672a\\u9078\\u64c7\",\"HeartLung\":\"\\u672a\\u9078\\u64c7\",\"LowerLimbEdema\":\"\\u672a\\u9078\\u64c7\",\"FundalHeight\":\"4\",\"Girth\":\"5\",\"FHB\":\"6\",\"Cervix\":\"\\u672a\\u9078\\u64c7\",\"Electrocardiogram\":\"\\u672a\\u9078\\u64c7\",\"FetalHeartCare\":\"\\u672a\\u9078\\u64c7\",\"BloodRBC\":\"7\",\"BloodHB\":\"8\",\"BloodWBC\":\"9\",\"BloodWBCCount\":\"8\",\"BloodPLT\":\"8\",\"UrinePH\":\"7897\",\"UrineSG\":\"87\",\"UrineURO\":\"5\",\"UrineBLD\":\"8\",\"UrineWBC\":\"88\",\"UrinePRO\":\"8\",\"UrineGLU\":\"7877\",\"UrineBIL\":\"87\",\"UrineKET\":\"7\",\"UrineRBC\":\"7\",\"UrineSugarEmpty\":\"7\",\"UrineSugarOne\":\"7\",\"UrineSugarTwo\":\"7\",\"LiverTP\":\"7\",\"LiverG\":\"7\",\"LiverALB\":\"7\",\"LiverAST\":\"7\",\"LiverALT\":\"7\",\"LiverSTB\":\"7\",\"LiverDBIL\":\"7\",\"LiverCHE\":\"7\",\"KidneyBUN\":\"8\",\"KidneySCR\":\"9\",\"KidneyB2_MG\":\"8\",\"KidneyUrineAcid\":\"7\",\"CreateTime\":{\"date\":\"2019-10-04 14:45:28.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1900-01-01\",\"Weight\":\"\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"\",\"CreateTime\":{\"date\":\"2019-10-04 15:36:38.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1900-01-01\",\"Weight\":\"\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"\",\"CreateTime\":{\"date\":\"2019-10-04 15:38:39.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1900-01-01\",\"Weight\":\"\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"\",\"CreateTime\":{\"date\":\"2019-10-04 15:39:26.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1990-01-01\",\"Weight\":\"30\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"\",\"CreateTime\":{\"date\":\"2019-12-15 22:16:44.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1990-01-01\",\"Weight\":\"34\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"33\",\"CreateTime\":{\"date\":\"2019-12-15 22:19:55.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}},{\"Date\":\"1990-01-01\",\"Weight\":\"\",\"SBP\":\"\",\"DBP\":\"\",\"Mouth\":\"\",\"HeartLung\":\"\",\"LowerLimbEdema\":\"\",\"FundalHeight\":\"\",\"Girth\":\"\",\"FHB\":\"\",\"Cervix\":\"\",\"Electrocardiogram\":\"\",\"FetalHeartCare\":\"\",\"BloodRBC\":\"\",\"BloodHB\":\"\",\"BloodWBC\":\"\",\"BloodWBCCount\":\"\",\"BloodPLT\":\"\",\"UrinePH\":\"\",\"UrineSG\":\"\",\"UrineURO\":\"\",\"UrineBLD\":\"\",\"UrineWBC\":\"\",\"UrinePRO\":\"\",\"UrineGLU\":\"\",\"UrineBIL\":\"\",\"UrineKET\":\"\",\"UrineRBC\":\"\",\"UrineSugarEmpty\":\"\",\"UrineSugarOne\":\"\",\"UrineSugarTwo\":\"\",\"LiverTP\":\"\",\"LiverG\":\"\",\"LiverALB\":\"\",\"LiverAST\":\"\",\"LiverALT\":\"\",\"LiverSTB\":\"\",\"LiverDBIL\":\"\",\"LiverCHE\":\"\",\"KidneyBUN\":\"\",\"KidneySCR\":\"\",\"KidneyB2_MG\":\"\",\"KidneyUrineAcid\":\"\",\"CreateTime\":{\"date\":\"2019-12-18 18:29:44.000000\",\"timezone_type\":3,\"timezone\":\"Asia\\/Taipei\"}}]";
                     JSONArray jRecords = new JSONArray(response);
                     records=new ArrayList<>();
                     for(int i=0;i<jRecords.length();i++)
@@ -425,16 +430,18 @@ public class RecordMain extends AppCompatActivity {
                 } catch (JSONException e) {
                     Log.e("ese",e.getMessage());
                 }
-            }
+           /* }
         });
         RequestQueue q= Volley.newRequestQueue(RecordMain.this);
-        q.add(getRecord);
+        q.add(getRecord);*/
     }
     public void GetSchedule(){
+        /*
         GetSchedule getSchedule=new GetSchedule(String.valueOf(userID), new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 try {
+                    String response="[{\"ScheduleID\":1,\"Date\":\"2019-11-02\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\\u6211\\u731c\"},{\"ScheduleID\":2,\"Date\":\"2019-11-29\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"xjxjj\\u554a\\u97a5\\u5662\\u5662\\u8a92\\u8a92\\n\"},{\"ScheduleID\":3,\"Date\":\"2019-12-28\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\\u771f2\"},{\"ScheduleID\":4,\"Date\":\"2020-01-25\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"dd\"},{\"ScheduleID\":5,\"Date\":\"2020-02-22\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"yy\"},{\"ScheduleID\":6,\"Date\":\"2020-03-07\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":7,\"Date\":\"2020-03-21\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":8,\"Date\":\"2020-04-04\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":9,\"Date\":\"2020-04-18\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":10,\"Date\":\"2020-04-25\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":11,\"Date\":\"2020-05-02\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":12,\"Date\":\"2020-05-09\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":13,\"Date\":\"2020-05-16\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":1029,\"Date\":\"2020-05-23\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"},{\"ScheduleID\":1030,\"Date\":\"2020-05-30\",\"Time\":\"00:00\",\"Number\":-1,\"Note\":\"\"}]";
                     JSONArray jEvents = new JSONArray(response);
                     events=new ArrayList<>();
                     for(int i=0;i<jEvents.length();i++)
@@ -454,9 +461,9 @@ public class RecordMain extends AppCompatActivity {
                 } catch (JSONException e) {
                     Log.e("ee",e.getMessage());
                 }
-            }
+          /*  }
         });
         RequestQueue q= Volley.newRequestQueue(RecordMain.this);
-        q.add(getSchedule);
+        q.add(getSchedule);*/
     }
 }

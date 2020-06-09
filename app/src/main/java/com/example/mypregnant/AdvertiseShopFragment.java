@@ -52,8 +52,9 @@ public class AdvertiseShopFragment extends Fragment {
 
 
 
-            videoImage.setTag("http://163.25.101.128/pregnant/shop/"+products.get(i).getProductID()+".jpg");
-            new DownloadImageTask().execute(videoImage);
+            //videoImage.setTag("http://163.25.101.128/pregnant/shop/"+products.get(i).getProductID()+".jpg");
+            videoImage.setImageDrawable(getActivity().getDrawable(R.drawable.photo54));
+            //new DownloadImageTask().execute(videoImage);
             final int finalI = i;
             videoImage.setOnClickListener(new View.OnClickListener() {
                 @Override

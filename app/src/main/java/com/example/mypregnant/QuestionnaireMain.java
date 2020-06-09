@@ -39,12 +39,15 @@ public class QuestionnaireMain extends AppCompatActivity {
         questionnaireMainWeek=findViewById(R.id.currentWeekText);
         questionnaireMainListView=findViewById(R.id.questionnaireMainListView);
         questionnaireMainWeek.setText(getSharedPreferences("data",0).getInt("PregnantWeek",0)+"");
+        //database
+        /*
         GetQuestionnaireDocument getQuestionnaireDocument=new GetQuestionnaireDocument(String.valueOf(userID),
                 String.valueOf(getSharedPreferences("data",0).getInt("PregnantWeek",0)), new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 documentList=new ArrayList<>();
                 try {
+                    String response="[{\"DocumentID\":1,\"QuestionnaireID\":1,\"QuestionnaireName\":\"\\u5b55\\u5a66\\u81ea\\u89ba\\u554f\\u5377\",\"Status\":1},{\"DocumentID\":2,\"QuestionnaireID\":2,\"QuestionnaireName\":\"\\u611b\\u4e01\\u5821\\u7522\\u5a66\\u6182\\u9b31\\u75c7\\u8a55\\u4f30\\u91cf\\u8868\",\"Status\":0},{\"DocumentID\":4,\"QuestionnaireID\":5,\"QuestionnaireName\":\"\\u6bcd\\u4e73\\u9935\\u990a\\u77e5\\u8b58\\u53cd\\u994b\\u554f\\u5377\",\"Status\":0}]";
                     JSONArray jDocument=new JSONArray(response);
                     for(int i=0;i<jDocument.length();i++)
                     {
@@ -68,7 +71,6 @@ public class QuestionnaireMain extends AppCompatActivity {
                                 intent.putExtra("DocumentID",documentList.get(i).getDocumentID());
                                 intent.putExtra("QuestionnaireName",documentList.get(i).getQuestionnaireName());
                                 startActivity(intent);
-                                finish();
                             }
                             else if(documentList.get(i).getStatus()==0)
                             {
@@ -77,7 +79,6 @@ public class QuestionnaireMain extends AppCompatActivity {
                                 intent.putExtra("DocumentID",documentList.get(i).getDocumentID());
                                 intent.putExtra("QuestionnaireName",documentList.get(i).getQuestionnaireName());
                                 startActivity(intent);
-                                finish();
                             }
 
                         }
@@ -85,11 +86,11 @@ public class QuestionnaireMain extends AppCompatActivity {
                 } catch (JSONException e) {
                     Toast.makeText(QuestionnaireMain.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
+/*
             }
         });
         RequestQueue q= Volley.newRequestQueue(this);
-        q.add(getQuestionnaireDocument);
+        q.add(getQuestionnaireDocument);*/
 
     }
 }

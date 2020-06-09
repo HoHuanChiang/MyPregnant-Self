@@ -58,10 +58,14 @@ public class PhysicalEdit extends AppCompatActivity {
     }
 
     private void getData(){
+
+        //database
+        /*
         GetDetailsRecord getDetailsRecord=new GetDetailsRecord(String.valueOf(userID), weekStartDate,category, new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 try {
+                    String response="[{\"date\":\"2019-11-30\",\"details\":[{\"Value1\":120,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":60,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"10:19\",\"Id\":\"20052\"}],\"type\":\"double\"},{\"date\":\"2019-12-01\",\"details\":[{\"Value1\":122,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":61,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"10:19\",\"Id\":\"20053\"}],\"type\":\"double\"},{\"date\":\"2019-12-02\",\"details\":[{\"Value1\":119,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":56,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"10:19\",\"Id\":\"20054\"}],\"type\":\"double\"},{\"date\":\"2019-12-03\",\"details\":[{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:46\",\"Id\":\"30055\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:46\",\"Id\":\"30056\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:47\",\"Id\":\"30057\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:49\",\"Id\":\"30058\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:50\",\"Id\":\"30059\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:53\",\"Id\":\"30060\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:55\",\"Id\":\"30061\"},{\"Value1\":150,\"Item1\":\"\\u6536\\u7e2e\\u58d3\",\"Value2\":150,\"Item2\":\"\\u8212\\u5f35\\u58d3\",\"Time\":\"02:56\",\"Id\":\"30062\"}],\"type\":\"double\"},{\"date\":\"2019-12-04\",\"details\":[],\"type\":\"double\"},{\"date\":\"2019-12-05\",\"details\":[],\"type\":\"double\"},{\"date\":\"2019-12-06\",\"details\":[],\"type\":\"double\"}]";
                     listLayout.removeAllViews();
                     JSONArray jValues=new JSONArray(response);
                     for(int i=0;i<jValues.length();i++){
@@ -144,16 +148,17 @@ public class PhysicalEdit extends AppCompatActivity {
                 } catch (JSONException e) {
                     Toast.makeText(PhysicalEdit.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
+/*
             }
         });
         RequestQueue q= Volley.newRequestQueue(PhysicalEdit.this);
-        q.add(getDetailsRecord);
+        q.add(getDetailsRecord);*/
 
 
     }
 
     public void updateData(){
+
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -188,6 +193,8 @@ public class PhysicalEdit extends AppCompatActivity {
                 }
 
                 Log.e("sdvsdv",jchangeArray.toString());
+                //database
+                /*
                 UpdatePhysical updatePhysical=new UpdatePhysical(jchangeArray.toString(),category, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -197,7 +204,8 @@ public class PhysicalEdit extends AppCompatActivity {
                 });
 
                 RequestQueue q= Volley.newRequestQueue(PhysicalEdit.this);
-                q.add(updatePhysical);
+                q.add(updatePhysical);*/
+                finish();
             }
         });
 

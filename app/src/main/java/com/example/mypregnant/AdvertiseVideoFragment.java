@@ -53,8 +53,9 @@ public class AdvertiseVideoFragment extends Fragment {
 
             Uri uri = Uri.parse(videos.get(i).getLink());
             String v = uri.getQueryParameter("v");
-            videoImage.setTag("https://img.youtube.com/vi/"+v+"/0.jpg");
-            new DownloadImageTask().execute(videoImage);
+            videoImage.setImageDrawable(getActivity().getDrawable(R.drawable.photo0));
+            //videoImage.setTag("https://img.youtube.com/vi/"+v+"/0.jpg");
+            //new DownloadImageTask().execute(videoImage);
             final int finalI = i;
             videoImage.setOnClickListener(new View.OnClickListener() {
                 @Override

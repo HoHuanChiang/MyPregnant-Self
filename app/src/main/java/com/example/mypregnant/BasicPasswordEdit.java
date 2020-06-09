@@ -39,6 +39,10 @@ public class BasicPasswordEdit extends AppCompatActivity {
                     Toast.makeText(BasicPasswordEdit.this, "密碼與確認密碼不一樣", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    Toast.makeText(BasicPasswordEdit.this, "變更密碼囉", Toast.LENGTH_SHORT).show();
+                    finish();
+                    //database
+                    /*
                     UpdatePassword updatePassword=new UpdatePassword(String.valueOf(userID), currentText.getText().toString(), firstText.getText().toString(), new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -56,7 +60,7 @@ public class BasicPasswordEdit extends AppCompatActivity {
                         }
                     });
                     RequestQueue q= Volley.newRequestQueue(BasicPasswordEdit.this);
-                    q.add(updatePassword);
+                    q.add(updatePassword);*/
                 }
             }
         });

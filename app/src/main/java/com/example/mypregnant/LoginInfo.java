@@ -84,11 +84,14 @@ public class LoginInfo extends AppCompatActivity {
 
                     account=firstEditText.getText().toString();
                     name=secondEditText.getText().toString();
+
                     if(account.equals("")||name.equals("")){
                         Log.e("sdvsdv","sdvsv");
                         RepositoryFucntion.CustomToast(LoginInfo.this,"請填寫完整!");
                     }
                     else{
+                        //database
+                        /*
                         CheckAccountExist checkAccountExist=new CheckAccountExist(account, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -109,7 +112,13 @@ public class LoginInfo extends AppCompatActivity {
                             }
                         });
                         RequestQueue q= Volley.newRequestQueue(LoginInfo.this);
-                        q.add(checkAccountExist);
+                        q.add(checkAccountExist);*/
+
+                        currentItemCount=(currentItemCount<5&&currentItemCount>=0)?currentItemCount+1:currentItemCount;
+                        nextBtn.setVisibility((currentItemCount==5)? View.INVISIBLE:View.VISIBLE);
+                        lastBtn.setVisibility((currentItemCount==0)? View.INVISIBLE:View.VISIBLE);
+                        setHeartPager();
+                        loginInfoViewPager.setCurrentItem(currentItemCount,true);
                     }
                 }
                 else if(position==1){
@@ -165,6 +174,8 @@ public class LoginInfo extends AppCompatActivity {
                         Toast.makeText(LoginInfo.this, "請填寫完整", Toast.LENGTH_SHORT).show();
                     }
                     else{
+                        //database
+                        /*
                         InsertUserInfo insertUserInfo=new InsertUserInfo(account,name,birthday,password,lastPeriod,weight,height,room,medicalID,doctor,nurse, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -173,7 +184,8 @@ public class LoginInfo extends AppCompatActivity {
                             }
                         });
                         RequestQueue q= Volley.newRequestQueue(LoginInfo.this);
-                        q.add(insertUserInfo);
+                        q.add(insertUserInfo);*/
+                        finish();
                     }
                 }
 

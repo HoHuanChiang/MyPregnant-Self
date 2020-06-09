@@ -124,13 +124,15 @@ public class DialogPhysialSummary extends Dialog {
         setData();
     }
     private void setData() {
-
+        //database
+        /*
         GetSummaryPhysical getSummaryPhysical=new GetSummaryPhysical(String.valueOf(userID),context.getSharedPreferences("data",0).getString("LastPeriodDate",""),category, new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 ArrayList<ArrayList<Entry>> totalDataSets=new ArrayList<>();
                 ArrayList<String> totalDataName=new ArrayList<>();
                 try {
+                    String response="[{\"item\":\"\\u6536\\u7e2e\\u58d3\",\"details\":[{\"week\":1,\"Value\":130},{\"week\":2,\"Value\":125},{\"week\":3,\"Value\":117},{\"week\":4,\"Value\":155},{\"week\":5,\"Value\":0},{\"week\":6,\"Value\":0},{\"week\":7,\"Value\":120},{\"week\":8,\"Value\":140},{\"week\":9,\"Value\":147},{\"week\":10,\"Value\":270},{\"week\":11,\"Value\":560},{\"week\":12,\"Value\":491},{\"week\":13,\"Value\":133},{\"week\":14,\"Value\":0},{\"week\":15,\"Value\":0},{\"week\":16,\"Value\":120},{\"week\":17,\"Value\":141},{\"week\":18,\"Value\":46},{\"week\":19,\"Value\":0},{\"week\":20,\"Value\":0},{\"week\":21,\"Value\":0},{\"week\":22,\"Value\":0},{\"week\":23,\"Value\":0},{\"week\":24,\"Value\":0},{\"week\":25,\"Value\":0},{\"week\":26,\"Value\":0},{\"week\":27,\"Value\":0},{\"week\":28,\"Value\":0},{\"week\":29,\"Value\":0},{\"week\":30,\"Value\":0},{\"week\":31,\"Value\":0},{\"week\":32,\"Value\":0},{\"week\":33,\"Value\":0},{\"week\":34,\"Value\":0},{\"week\":35,\"Value\":0},{\"week\":36,\"Value\":0},{\"week\":37,\"Value\":0},{\"week\":38,\"Value\":0},{\"week\":39,\"Value\":0},{\"week\":40,\"Value\":0}]},{\"item\":\"\\u8212\\u5f35\\u58d3\",\"details\":[{\"week\":1,\"Value\":64},{\"week\":2,\"Value\":58},{\"week\":3,\"Value\":44},{\"week\":4,\"Value\":47},{\"week\":5,\"Value\":0},{\"week\":6,\"Value\":0},{\"week\":7,\"Value\":60},{\"week\":8,\"Value\":56},{\"week\":9,\"Value\":54},{\"week\":10,\"Value\":118},{\"week\":11,\"Value\":257},{\"week\":12,\"Value\":94},{\"week\":13,\"Value\":81},{\"week\":14,\"Value\":0},{\"week\":15,\"Value\":0},{\"week\":16,\"Value\":60},{\"week\":17,\"Value\":125},{\"week\":18,\"Value\":53},{\"week\":19,\"Value\":0},{\"week\":20,\"Value\":0},{\"week\":21,\"Value\":0},{\"week\":22,\"Value\":0},{\"week\":23,\"Value\":0},{\"week\":24,\"Value\":0},{\"week\":25,\"Value\":0},{\"week\":26,\"Value\":0},{\"week\":27,\"Value\":0},{\"week\":28,\"Value\":0},{\"week\":29,\"Value\":0},{\"week\":30,\"Value\":0},{\"week\":31,\"Value\":0},{\"week\":32,\"Value\":0},{\"week\":33,\"Value\":0},{\"week\":34,\"Value\":0},{\"week\":35,\"Value\":0},{\"week\":36,\"Value\":0},{\"week\":37,\"Value\":0},{\"week\":38,\"Value\":0},{\"week\":39,\"Value\":0},{\"week\":40,\"Value\":0}]}]";
                     JSONArray totalData=new JSONArray(response);
                     ArrayList<Float> yData=new ArrayList<>();
 
@@ -236,12 +238,12 @@ public class DialogPhysialSummary extends Dialog {
                 } catch (JSONException e) {
                     Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
+/*
             }
         });
         RequestQueue q= Volley.newRequestQueue(context);
         q.add(getSummaryPhysical);
-
+*/
     }
     private void setParameters(ArrayList<ArrayList<Entry>> totalData,ArrayList<String> totalDataName){
 

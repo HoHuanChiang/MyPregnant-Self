@@ -63,7 +63,8 @@ public class DialogRecordAdd extends Dialog {
                 }
 
                 String date=dateText.getText().toString()+" "+timeText.getText().toString()+":00.000";
-
+                //database
+                /*
                 InsertSchedule insertSchedule=new InsertSchedule(String.valueOf(userID), date,
                         numberText.getText().toString(),noteText.getText().toString(), new Response.Listener<String>() {
                     @Override
@@ -80,7 +81,8 @@ public class DialogRecordAdd extends Dialog {
                     }
                 });
                 RequestQueue q= Volley.newRequestQueue(context);
-                q.add(insertSchedule);
+                q.add(insertSchedule);*/
+                dismiss();
             }
         });
     }

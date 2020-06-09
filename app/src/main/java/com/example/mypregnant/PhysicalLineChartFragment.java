@@ -168,12 +168,15 @@ public class PhysicalLineChartFragment extends Fragment {
         setData();
     }
     private void setData() {
+        //database
+        /*
         GetPhysicalData getPhysicalData=new GetPhysicalData(String.valueOf(userID),getActivity().getSharedPreferences("data",0).getString("WeekStartDate",""),category, new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(String response) {*/
                 ArrayList<ArrayList<Entry>> totalDataSets=new ArrayList<>();
                 ArrayList<String> totalDataName=new ArrayList<>();
                 try {
+                    String response="[{\"item\":\"\\u6536\\u7e2e\\u58d3\",\"details\":[{\"week\":1,\"Value\":0,\"date\":\"2019-10-18\"},{\"week\":2,\"Value\":474,\"date\":\"2019-10-19\"},{\"week\":3,\"Value\":552,\"date\":\"2019-10-20\"},{\"week\":4,\"Value\":889,\"date\":\"2019-10-21\"},{\"week\":5,\"Value\":0,\"date\":\"2019-10-22\"},{\"week\":6,\"Value\":0,\"date\":\"2019-10-23\"},{\"week\":7,\"Value\":0,\"date\":\"2019-10-24\"}]},{\"item\":\"\\u8212\\u5f35\\u58d3\",\"details\":[{\"week\":1,\"Value\":0,\"date\":\"2019-10-18\"},{\"week\":2,\"Value\":200,\"date\":\"2019-10-19\"},{\"week\":3,\"Value\":58,\"date\":\"2019-10-20\"},{\"week\":4,\"Value\":856,\"date\":\"2019-10-21\"},{\"week\":5,\"Value\":0,\"date\":\"2019-10-22\"},{\"week\":6,\"Value\":0,\"date\":\"2019-10-23\"},{\"week\":7,\"Value\":0,\"date\":\"2019-10-24\"}]}]";
                     JSONArray totalData=new JSONArray(response);
                     ArrayList<Float> yData=new ArrayList<>();
                     final ArrayList<String> dateStringX=new ArrayList<>();
@@ -237,11 +240,11 @@ public class PhysicalLineChartFragment extends Fragment {
                 } catch (JSONException e) {
                     Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
+/*
             }
         });
         RequestQueue q= Volley.newRequestQueue(getActivity());
-        q.add(getPhysicalData);
+        q.add(getPhysicalData);*/
 
 
 

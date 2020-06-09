@@ -76,6 +76,8 @@ public class DialogScheduleUpdate extends Dialog {
                 event.setNote(noteText.getText().toString());
                 Gson g=new Gson();
                 //Log.e("gons",g.toJson(event));
+                //databse
+                /*
                 UpdateSchedule updateSchedule=new UpdateSchedule(g.toJson(event), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -83,7 +85,8 @@ public class DialogScheduleUpdate extends Dialog {
                     }
                 });
                 RequestQueue q= Volley.newRequestQueue(context);
-                q.add(updateSchedule);
+                q.add(updateSchedule);*/
+                dismiss();
             }
         });
     }

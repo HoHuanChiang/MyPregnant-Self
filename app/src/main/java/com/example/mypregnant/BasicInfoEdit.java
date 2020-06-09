@@ -60,6 +60,8 @@ public class BasicInfoEdit extends AppCompatActivity {
         });
     }
     public void GetPersonalData(){
+        //database
+        /*
         GetUserInfo getUserInfo=new GetUserInfo(new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -83,6 +85,18 @@ public class BasicInfoEdit extends AppCompatActivity {
             }
         });
         RequestQueue q= Volley.newRequestQueue(this);
-        q.add(getUserInfo);
+        q.add(getUserInfo);*/
+        nameText.setText("張三");
+        accountText.setText("A123456789");
+        birthdayText.setText("1997-05-16");
+        lastPeriodText.setText("2019-08-10");
+        heightText.setText("180");
+        weightText.setText("70");
+        weekText.setText("18");
+
+        roomText.setText("2772");
+        medicalIDText.setText("2486216474");
+        doctorText.setText("張健一醫生");
+        nurseText.setText("王曉明護士");
     }
 }

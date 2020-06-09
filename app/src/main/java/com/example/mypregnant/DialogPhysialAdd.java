@@ -99,6 +99,9 @@ public class DialogPhysialAdd extends Dialog {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(context, "新增確認", Toast.LENGTH_SHORT).show();
+                //database
+                /*
                 String date=dateText.getText().toString();
                 String session="";
                 String value=valueText.getText().toString();
@@ -133,7 +136,8 @@ public class DialogPhysialAdd extends Dialog {
                     }
                 });
                 RequestQueue q= Volley.newRequestQueue(context);
-                q.add(insertPhysical);
+                q.add(insertPhysical);*/
+                dismiss();
             }
         });
     }

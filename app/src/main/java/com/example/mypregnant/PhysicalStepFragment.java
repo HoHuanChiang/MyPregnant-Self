@@ -92,10 +92,12 @@ public class PhysicalStepFragment extends Fragment {
         setData();
     }
     private void setData() {
+        //database
+        /*
         GetStep getStep=new GetStep(String.valueOf(userID), weekStartDate, new Response.Listener<String>() {
             @Override
-            public void onResponse(String response) {
-
+            public void onResponse(String response) {*/
+                String response="[{\"step\":26,\"date\":\"2019-08-15\"},{\"step\":50,\"date\":\"2019-08-16\"},{\"step\":70,\"date\":\"2019-08-17\"},{\"step\":150,\"date\":\"2019-08-18\"},{\"step\":50,\"date\":\"2019-08-19\"},{\"date\":\"2019-08-20\",\"step\":0},{\"date\":\"2019-08-21\",\"step\":0}]";
                 ArrayList<BarEntry> stepArray = new ArrayList<>();
                 try {
 
@@ -165,11 +167,11 @@ public class PhysicalStepFragment extends Fragment {
                 } catch (JSONException e) {
                     Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
+/*
             }
         });
         RequestQueue q= Volley.newRequestQueue(getActivity());
-        q.add(getStep);
+        q.add(getStep);*/
 
 
 
