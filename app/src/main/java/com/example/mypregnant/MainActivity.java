@@ -449,7 +449,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {*/
                 try {
-                    String response="{\"UserID\":1,\"LastPeriodDate\":\"2019-08-10\",\"PregnantWeek\":18,\"WeekStartDate\":\"2019-12-07\",\"Weight\":70,\"Height\":180,\"BirthdayDate\":\"2018-10-10\",\"Room\":\"2772\",\"MedicalID\":\"2782\",\"Doctor\":\"\\u53ef\\u53ef\",\"Nurse\":\"\\u55da\\u55da\\u55da\",\"Name\":\"Tom\",\"Account\":\"aa\"}";
+                    String response="{\"UserID\":1,\"LastPeriodDate\":\"2019-08-24\",\"PregnantWeek\":16,\"WeekStartDate\":\"2019-12-07\",\"Weight\":70,\"Height\":180,\"BirthdayDate\":\"2018-10-10\",\"Room\":\"2772\",\"MedicalID\":\"2782\",\"Doctor\":\"\\u53ef\\u53ef\",\"Nurse\":\"\\u55da\\u55da\\u55da\",\"Name\":null,\"Account\":\"aa\"}";
                     JSONObject jUserInfo = new JSONObject(response);
                     sharedPreferences.edit().putInt("user", jUserInfo.getInt("UserID")).commit();
                     sharedPreferences.edit().putInt("PregnantWeek", jUserInfo.getInt("PregnantWeek")).commit();

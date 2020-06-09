@@ -97,7 +97,7 @@ public class PhysicalStepFragment extends Fragment {
         GetStep getStep=new GetStep(String.valueOf(userID), weekStartDate, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {*/
-                String response="[{\"step\":26,\"date\":\"2019-08-15\"},{\"step\":50,\"date\":\"2019-08-16\"},{\"step\":70,\"date\":\"2019-08-17\"},{\"step\":150,\"date\":\"2019-08-18\"},{\"step\":50,\"date\":\"2019-08-19\"},{\"date\":\"2019-08-20\",\"step\":0},{\"date\":\"2019-08-21\",\"step\":0}]";
+                String response="[{\"step\":500,\"date\":\"2019-11-30\"},{\"step\":666,\"date\":\"2019-12-01\"},{\"step\":600,\"date\":\"2019-12-02\"},{\"step\":1200,\"date\":\"2019-12-03\"},{\"step\":900,\"date\":\"2019-12-04\"},{\"step\":450,\"date\":\"2019-12-05\"},{\"step\":800,\"date\":\"2019-12-06\"}]";
                 ArrayList<BarEntry> stepArray = new ArrayList<>();
                 try {
 
